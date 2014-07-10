@@ -12,13 +12,11 @@ class EmployeeFilter
   end
 
   def all_with_start_date
-    # ex: ["Beaulah Thompson (Lead Security Facilitator) - 2/9/2005"]
-    return_arr = []
-    @arr_o_hashes.each do |hash|
-      return_arr.push "#{hash[:first_name]} #{hash[:last_name]} (#{hash[:title]}) - #{hash[:start_date].month}/#{hash[:start_date].day}/#{hash[:start_date].year}"
+    @arr_o_hashes.map do |hash|
+      "#{hash[:first_name]} #{hash[:last_name]} (#{hash[:title]}) - #{hash[:start_date].month}/#{hash[:start_date].day}/#{hash[:start_date].year}"
     end
-    return_arr
   end
+
 end
 
 
