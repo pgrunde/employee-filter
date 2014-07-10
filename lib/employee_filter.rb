@@ -5,9 +5,8 @@ class EmployeeFilter
   end
 
   def started_before_2006
-    yr_2006 = Date.new(2006)
-    before_06 = @arr_o_hashes.select do |hash|
-      hash[:start_date] < yr_2006
+    @arr_o_hashes.select do |hash|
+      hash[:start_date] < Date.new(2006)
     end
   end
 
