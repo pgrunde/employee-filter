@@ -5,9 +5,7 @@ class EmployeeFilter
   end
 
   def started_before_2006
-    @arr_o_hashes.select do |hash|
-      hash[:start_date] < Date.new(2006)
-    end
+    @arr_o_hashes.select { |hash| hash[:start_date] < Date.new(2006) }
   end
 
   def all_with_start_date
